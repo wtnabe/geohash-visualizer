@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="geohash-js/geohash.js"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script type="text/javascript">google.load("jquery", "1.7");</script>
+    <title>Geohashエリア確認ツール2</title>
+    <style type="text/css" media="screen">
+      input[type="text"] {
+        width: 8em;
+      }
+      #map {
+        width:   500px;
+        height:  400px;
+      }
+      #address {
+        width: 20em;
+      }
+      #geohash {
+        width: 98%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <form method="get" id="geocode">
+      <table>
+        <tr>
+          <th>Address</th>
+          <td><input id="address" type="text" name="address" value=""> <input type="submit" name="" value=" geocode ! "></td>
+        </tr>
+      </table>
+    </form>
+    <form method="get" id="geoform">
+      <table>
+        <tr>
+          <th>Geohashes</th>
+          <td><textarea id="geohashes" type="text" name="geohashes" value="">xn3pvxy</textarea></td>
+          <td><input type="submit" name="" value=" geohash ! "></td>
+        </tr>
+      </table>
+    </form>
+    <form method="get" id="mapinfo">
+      <table>
+        <tr>
+          <th>LatLng</th><th>Zoom</th><th>width</th><th>height</th>
+        </tr>
+        <tr>
+          <td><input id="latlng" type="text" name="latlng" value=""></td>
+          <td><input id="zoom" type="text" name="zoom" value=""></td>
+          <td><input id="width" type="text" name="width" value=""></td>
+          <td><input id="height" type="text" name="height" value=""></td>
+        </tr>
+        <tr>
+          <td colspan="4" align="center"><input type="submit" name="" value=" 更新 ! "></td>
+        </tr>
+      </table>
+    </form>
+    <script type="text/javascript" src="geohash_visualizer2.js"></script>
+  </body>
+</html>
